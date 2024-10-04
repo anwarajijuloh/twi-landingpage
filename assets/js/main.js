@@ -202,6 +202,7 @@ function password_show_hide() {
       mirror: false,
     });
   });
+  
   const fonts = ["cursive","sans-serif","serif","monospace"];
   let captchaValue = "";
   function generateCaptcha(){
