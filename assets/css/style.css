@@ -558,6 +558,84 @@ h6 {
   color: #2A9C27;
 }
 /*--------------------------------------------------------------
+  # Plan Section
+  --------------------------------------------------------------*/
+.plan h3 {
+  margin-bottom: 1em;
+  font-size: 36px;
+  font-weight: 700;
+  color: #E5FC39;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: italic;
+  border-radius: 20px 0 20px 0;
+  padding: 20px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(12, 45, 55, 1),
+    rgba(42, 183, 32, 1),
+    rgba(12, 156, 39, 1)
+  );
+}
+
+.plan-card {
+  padding: 28px;
+  border-radius: 20px;
+  border: 2px solid #E5FC39;
+  border-style: dashed;
+  text-align: center;
+}
+
+.plan-card h5 {
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #E5FC39;
+  text-transform: uppercase;
+}
+
+.plan-poin {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.plan-poin .poin{
+  padding: 10px;
+  background: #BF00FF;
+  color: #fff;
+}
+.plan-poin .paket{
+  padding: 10px;
+}
+
+.plan-card p {
+  padding: 10px;
+  margin: 10px;
+  background: #D4090C;
+  color: #E5FC39;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.plan-card h6 {
+  margin: 0;
+  font-weight: 600;
+  color: #E5FC39;
+  text-transform: uppercase;
+}
+
+@media (max-width: 575px) {
+  .plan h3 {
+    font-size: 26px;
+  }
+}
+/*--------------------------------------------------------------
   # Hero Section
   --------------------------------------------------------------*/
 #hero {
