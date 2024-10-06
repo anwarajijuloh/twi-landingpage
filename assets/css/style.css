@@ -438,16 +438,14 @@ h6 {
 /*--------------------------------------------------------------
   # Login Section
   --------------------------------------------------------------*/
-#login {
-  width: 100%;
-  background: url("../img/login-bg.png");
-  position: relative;
+.content.app-content {
   background-size: cover;
-  background-position: center;
+  position: relative;
+  background: url(../img/login-bg.png) center no-repeat fixed !important;
+  background-size: cover !important;
 }
 
 #login .login-card {
-  position: relative;
   text-align: center;
   border-radius: 20px;
   padding: 20px;
@@ -513,7 +511,7 @@ h6 {
   font-weight: 600;
   color: #fff;
   border: 4px solid transparent;
-  border-image: linear-gradient(to right, #BF963E, #F3E892, #AF862F);
+  border-image: linear-gradient(to right, #bf963e, #f3e892, #af862f);
   border-image-slice: 1;
   padding: 25px;
 }
@@ -533,7 +531,7 @@ h6 {
   --------------------------------------------------------------*/
 
 .product-card {
-  background: #E5FC39;
+  background: #e5fc39;
   border-radius: 20px;
   align-items: center;
 }
@@ -545,7 +543,7 @@ h6 {
 }
 .product-info h2 {
   padding: 10px 20px;
-  background: #2A9C27;
+  background: #2a9c27;
   font-weight: bold;
   color: #fff;
   text-align: center;
@@ -555,7 +553,7 @@ h6 {
   font-size: 16px;
 }
 .product-info span {
-  color: #2A9C27;
+  color: #2a9c27;
 }
 /*--------------------------------------------------------------
   # Plan Section
@@ -564,7 +562,7 @@ h6 {
   margin-bottom: 1em;
   font-size: 36px;
   font-weight: 700;
-  color: #E5FC39;
+  color: #e5fc39;
   text-transform: uppercase;
   text-align: center;
   font-style: italic;
@@ -581,7 +579,7 @@ h6 {
 .plan-card {
   padding: 28px;
   border-radius: 20px;
-  border: 2px solid #E5FC39;
+  border: 2px solid #e5fc39;
   border-style: dashed;
   text-align: center;
 }
@@ -591,7 +589,7 @@ h6 {
   padding-bottom: 10px;
   font-size: 24px;
   font-weight: 700;
-  color: #E5FC39;
+  color: #e5fc39;
   text-transform: uppercase;
 }
 
@@ -604,20 +602,20 @@ h6 {
   letter-spacing: 1px;
 }
 
-.plan-poin .poin{
+.plan-poin .poin {
   padding: 10px;
-  background: #BF00FF;
+  background: #bf00ff;
   color: #fff;
 }
-.plan-poin .paket{
+.plan-poin .paket {
   padding: 10px;
 }
 
 .plan-card p {
   padding: 10px;
   margin: 10px;
-  background: #D4090C;
-  color: #E5FC39;
+  background: #d4090c;
+  color: #e5fc39;
   text-transform: uppercase;
   font-weight: bold;
   border-radius: 10px;
@@ -626,7 +624,7 @@ h6 {
 .plan-card h6 {
   margin: 0;
   font-weight: 600;
-  color: #E5FC39;
+  color: #e5fc39;
   text-transform: uppercase;
 }
 
