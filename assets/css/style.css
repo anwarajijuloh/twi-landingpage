@@ -1417,7 +1417,6 @@ section {
   --------------------------------------------------------------*/
 .contact .info {
   width: 100%;
-  background: #fff;
 }
 
 .contact .info i {
@@ -1446,7 +1445,7 @@ section {
   padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
-  color: #0205a1;
+  color: #fff;
 }
 
 .contact .info .email,
@@ -1463,7 +1462,6 @@ section {
 
 .contact .php-email-form {
   width: 100%;
-  background: #fff;
 }
 
 .contact .php-email-form .form-group {
@@ -1513,9 +1511,15 @@ section {
 
 .contact .php-email-form input,
 .contact .php-email-form textarea {
-  border-radius: 0;
+  border-radius: 10px;
   box-shadow: none;
   font-size: 14px;
+  background: transparent;
+}
+
+.contact .php-email-form input::placeholder,
+.contact .php-email-form textarea::placeholder {
+  color: #fff;
 }
 
 .contact .php-email-form input {
@@ -1530,7 +1534,7 @@ section {
   background: #e5fc39;
   border: 0;
   padding: 10px 30px;
-  color: #fff;
+  color: #000;
   transition: 0.4s;
   border-radius: 50px;
 }
@@ -1553,7 +1557,7 @@ section {
   # Footer
   --------------------------------------------------------------*/
 #footer {
-  background: #010351;
+  background: #2AB720;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
