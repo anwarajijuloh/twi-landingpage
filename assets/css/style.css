@@ -1557,7 +1557,7 @@ section {
   # Footer
   --------------------------------------------------------------*/
 #footer {
-  background: #2AB720;
+  background: #2ab720;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
@@ -1914,7 +1914,10 @@ section {
   border: none;
 }
 
-.sponsor, .matching, .pairing, .fast-track ul li {
+.sponsor,
+.matching,
+.pairing,
+.fast-track ul li {
   font-size: 14px;
   font-weight: 600;
   color: #fff;
@@ -1931,4 +1934,66 @@ section {
   border: 1px solid #fff;
   margin-top: 12px;
   padding: 10px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+.tos {
+  font-family: "Lora", serif !important;
+  line-height: 1.5;
+  margin: 20px;
+  background: #fff;
+  padding: 45px;
+  border-radius: 6px;
+}
+
+.tos h1, h2 {
+  font-family: "Lora", serif !important;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tos h1 {
+  font-size: 24px;
+}
+
+.tos h2 {
+  padding: 26px;
+  font-size: 20px;
+}
+
+.tos p {
+  text-align: justify;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.tos ol {
+  margin-left: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.tos ol li {
+  margin-bottom: 10px;
+}
+
+.tos ol li ol {
+  margin-left: 20px;
+}
+
+.tos ol li ol li {
+  margin-bottom: 5px;
+  list-style-type: lower-alpha;
+}
+ol[type="a"] {
+  color: #000;
+  padding-left: 10px;
+}
+
+ol[type="a"] li {
+  margin-top: 10px;
+  font-size: 16px;
 }
