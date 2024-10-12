@@ -1,22 +1,21 @@
 function password_show_hide() {
-    var x = document.getElementById("password");
-    var show_eye = document.getElementById("show_eye");
-    var hide_eye = document.getElementById("hide_eye");
-    hide_eye.classList.remove("d-none");
-    if (x.type === "password") {
-      x.type = "text";
-      show_eye.style.display = "none";
-      hide_eye.style.display = "block";
-    } else {
-      x.type = "password";
-      show_eye.style.display = "block";
-      hide_eye.style.display = "none";
-    }
+  var x = document.getElementById("password");
+  var show_eye = document.getElementById("show_eye");
+  var hide_eye = document.getElementById("hide_eye");
+  hide_eye.classList.remove("d-none");
+  if (x.type === "password") {
+    x.type = "text";
+    show_eye.style.display = "none";
+    hide_eye.style.display = "block";
+  } else {
+    x.type = "password";
+    show_eye.style.display = "block";
+    hide_eye.style.display = "none";
   }
-  (function () {
+}
+(function () {
   "use strict";
 
-  
   /**
    * Easy selector helper function
    */
@@ -202,49 +201,58 @@ function password_show_hide() {
       mirror: false,
     });
   });
-  
+
   const fonts = ["cursive", "sans-serif", "serif", "monospace"];
-        let captchaValue = "";
+  let captchaValue = "";
 
-        // Fungsi untuk menghasilkan CAPTCHA berupa 6 digit angka
-        function generateCaptcha() {
-            captchaValue = Math.floor(100000 + Math.random() * 900000).toString(); // Menghasilkan angka acak 6 digit
-        }
+  // Fungsi untuk menghasilkan CAPTCHA berupa 6 digit angka
+  function generateCaptcha() {
+    captchaValue = Math.floor(100000 + Math.random() * 900000).toString(); // Menghasilkan angka acak 6 digit
+  }
 
-        // Fungsi untuk menampilkan CAPTCHA dengan gaya rotasi dan font acak
-        function setCaptcha() {
-            let html = captchaValue.split("").map((char) => {
-                const rotate = -20 + Math.trunc(Math.random() * 30);  // Rotasi acak untuk setiap angka
-                const font = Math.trunc(Math.random() * fonts.length);  // Font acak dari array fonts
-                return `<span
+  // Fungsi untuk menampilkan CAPTCHA dengan gaya rotasi dan font acak
+  function setCaptcha() {
+    let html = captchaValue
+      .split("")
+      .map((char) => {
+        const rotate = -20 + Math.trunc(Math.random() * 30); // Rotasi acak untuk setiap angka
+        const font = Math.trunc(Math.random() * fonts.length); // Font acak dari array fonts
+        return `<span
                     style="
                         transform:rotate(${rotate}deg);
                         font-family:${fonts[font]};
                     "
                 >${char}</span>`;
-            }).join("");
-            document.querySelector(".login-form .captcha .preview").innerHTML = html;  // Menyisipkan CAPTCHA ke dalam HTML
-        }
+      })
+      .join("");
+    document.querySelector(".login-form .captcha .preview").innerHTML = html; // Menyisipkan CAPTCHA ke dalam HTML
+  }
 
-        // Inisialisasi CAPTCHA saat halaman dimuat
-        function initCaptcha() {
-            document.querySelector(".login-form .captcha .captcha-refresh").addEventListener("click", function () {
-                generateCaptcha();
-                setCaptcha();
-            });
-            generateCaptcha();
-            setCaptcha();
-        }
+  // Inisialisasi CAPTCHA saat halaman dimuat
+  function initCaptcha() {
+    document
+      .querySelector(".login-form .captcha .captcha-refresh")
+      .addEventListener("click", function () {
+        generateCaptcha();
+        setCaptcha();
+      });
+    generateCaptcha();
+    setCaptcha();
+  }
 
-        initCaptcha();
+  initCaptcha();
 
-        // Validasi CAPTCHA saat tombol login ditekan
-        document.querySelector(".login-form #login-btn").addEventListener("click", function () {
-            let inputCaptchaValue = document.querySelector(".login-form .captcha input").value;
-            if (inputCaptchaValue === captchaValue) {
-                swal("", "Logging In!", "success");
-            } else {
-                swal("Invalid captcha");
-            }
-        });
+  // Validasi CAPTCHA saat tombol login ditekan
+  document
+    .querySelector(".login-form #login-btn")
+    .addEventListener("click", function () {
+      let inputCaptchaValue = document.querySelector(
+        ".login-form .captcha input"
+      ).value;
+      if (inputCaptchaValue === captchaValue) {
+        swal("", "Logging In!", "success");
+      } else {
+        swal("Invalid captcha");
+      }
+    });
 })();
