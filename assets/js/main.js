@@ -203,42 +203,48 @@ function password_show_hide() {
     });
   });
   
-  const fonts = ["cursive","sans-serif","serif","monospace"];
-  let captchaValue = "";
-  function generateCaptcha(){
-    let value = btoa(Math.random()*1000000000);
-    value = value.substr(0,5+Math.random()*5);
-    captchaValue = value;
-  }
-  function setCaptcha(){
-    let html = captchaValue.split("").map((char)=>{
-      const rotate = -20 + Math.trunc(Math.random()*30);
-      const font = Math.trunc(Math.random()*fonts.length);
-      return `<span
-        style="
-          transform:rotate(${rotate}deg);
-          font-family:${fonts[font]}
-        "
-      >${char}</span>`;
-    }).join("");
-    document.querySelector(".login-form .captcha .preview").innerHTML = html;
-  }
-  function initCaptcha(){
-    document.querySelector(".login-form .captcha .captcha-refresh").addEventListener("click",function(){
-      generateCaptcha();
-      setCaptcha();
-    });
-    generateCaptcha();
-    setCaptcha();
-  }
-  initCaptcha();
+  const fonts = ["cursive", "sans-serif", "serif", "monospace"];
+        let captchaValue = "";
 
-  document.querySelector(".login-form #login-btn").addEventListener("click",function(){
-    let inputCaptchaValue = document.querySelector(".login-form .captcha input").value;
-    if(inputCaptchaValue === captchaValue){
-      swal("", "Logging In!", "success");
-    } else {
-      swal("Invalid captcha");
-    }
-  });
+        // Fungsi untuk menghasilkan CAPTCHA berupa 6 digit angka
+        function generateCaptcha() {
+            captchaValue = Math.floor(100000 + Math.random() * 900000).toString(); // Menghasilkan angka acak 6 digit
+        }
+
+        // Fungsi untuk menampilkan CAPTCHA dengan gaya rotasi dan font acak
+        function setCaptcha() {
+            let html = captchaValue.split("").map((char) => {
+                const rotate = -20 + Math.trunc(Math.random() * 30);  // Rotasi acak untuk setiap angka
+                const font = Math.trunc(Math.random() * fonts.length);  // Font acak dari array fonts
+                return `<span
+                    style="
+                        transform:rotate(${rotate}deg);
+                        font-family:${fonts[font]};
+                    "
+                >${char}</span>`;
+            }).join("");
+            document.querySelector(".login-form .captcha .preview").innerHTML = html;  // Menyisipkan CAPTCHA ke dalam HTML
+        }
+
+        // Inisialisasi CAPTCHA saat halaman dimuat
+        function initCaptcha() {
+            document.querySelector(".login-form .captcha .captcha-refresh").addEventListener("click", function () {
+                generateCaptcha();
+                setCaptcha();
+            });
+            generateCaptcha();
+            setCaptcha();
+        }
+
+        initCaptcha();
+
+        // Validasi CAPTCHA saat tombol login ditekan
+        document.querySelector(".login-form #login-btn").addEventListener("click", function () {
+            let inputCaptchaValue = document.querySelector(".login-form .captcha input").value;
+            if (inputCaptchaValue === captchaValue) {
+                swal("", "Logging In!", "success");
+            } else {
+                swal("Invalid captcha");
+            }
+        });
 })();
