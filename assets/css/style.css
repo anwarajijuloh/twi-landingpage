@@ -1913,3 +1913,22 @@ section {
   height: 100%;
   border: none;
 }
+
+.sponsor, .matching, .pairing, .fast-track ul li {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  font-style: italic;
+}
+
+.fast-track p {
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.fast-track .note {
+  border: 1px solid #fff;
+  margin-top: 12px;
+  padding: 10px;
+}
