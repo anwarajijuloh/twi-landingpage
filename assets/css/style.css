@@ -1831,11 +1831,12 @@ section {
   border-radius: 10px;
 }
 
-.plan-card h6 {
+.plan-card h5 {
   margin: 0;
   font-weight: 600;
   color: #e5fc39;
   text-transform: uppercase;
+  font-size: 16px;
 }
 
 .plan-title {
@@ -1937,8 +1938,33 @@ section {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+.tos, h6 {
+  font-family: "Lora", serif !important;
+  background: #fff;
+  padding: 15px;
+  border-radius: 6px;
+}
 
-.tos {
+.tos h6 {
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 34px;
+}
+
+@media (max-width: 575px) {
+  .tos li, p {
+    font-size: 12px;
+  }
+  .tos h6 {
+    font-size: 16px;
+    padding: 20px;
+  }
+}
+
+/* .tos {
   font-family: "Lora", serif !important;
   line-height: 1.5;
   margin: 20px;
@@ -1996,4 +2022,4 @@ ol[type="a"] {
 ol[type="a"] li {
   margin-top: 10px;
   font-size: 16px;
-}
+} */
